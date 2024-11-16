@@ -1,8 +1,13 @@
 auto lo
 iface lo inet loopback
 auto eth0
-iface eth0 inet dhcp
-    udhcpc_opts -t 1
+iface eth0 inet static
+    address 10.99.99.99
+    netmask 255.255.255.0
+    gateway 10.99.99.1
+    dns-nameservers 8.8.8.8 8.8.4.4
 auto usb0
-iface usb0 inet dhcp
-
+iface usb0 inet static
+    address 10.88.88.88
+    netmask 255.255.255.0
+    gateway 10.88.88.1
